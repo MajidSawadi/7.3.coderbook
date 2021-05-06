@@ -6,4 +6,4 @@ import api from "../../apiService";
 
 const authActions = {};
 
-export default authActions;
+export  {authActions}
