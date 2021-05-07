@@ -106,6 +106,21 @@
       "email": "majidsawadi@gmail.com",
       "password": "daafaf",
       "id": 19
+    },
+    {
+      "email": "majidsawadi@gmail.com",
+      "password": "mmkjhkjh",
+      "id": 20
+    },
+    {
+      "email": "majidsawadi@gmail.com",
+      "password": "jhgjh",
+      "id": 21
+    },
+    {
+      "email": "majidsawadi@gmail.com",
+      "password": "bblkjbb",
+      "id": 22
     }
   ],
   "posts": [
@@ -115,6 +130,9 @@
       "body": "Hello World Newest",
       "createdAt": "Wed May 05 2021 13:22:33 GMT+0700",
       "photos": [
+        {
+          "url": "https://bit.ly/3ejqYjx"
+        },
         {
           "url": "https://bit.ly/3ejqYjx"
         },
