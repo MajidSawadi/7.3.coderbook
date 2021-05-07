@@ -1,5 +1,5 @@
 import React from 'react' 
-import {Card , Button, Container, Row, Col, Image} from 'react-bootstrap';
+import {Card , Button, Container, Row, InputGroup, FormControl, Image} from 'react-bootstrap';
 import {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {postActions} from '../redux/actions'
@@ -38,9 +38,18 @@ const HomePage = () => {
                     
                     </Row>
                   
-                  <Button variant="primary">Go somewhere</Button>
+                    <InputGroup className="mb-3">
+    <FormControl
+      placeholder="your comment..."
+      aria-label="your comment.."
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary">comment</Button>
+    </InputGroup.Append>
+  </InputGroup>
                 </Card.Body>
-              </Card>);
+              </Card>)
             })}
            </Row>
         </Container>
