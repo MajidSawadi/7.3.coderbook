@@ -3,6 +3,7 @@ import {useState} from 'react'
 import {useDispatch , useSelector}from 'react-redux'
 import {authActions} from '../redux/actions'
 import {Form , Button, Container} from 'react-bootstrap'
+import { Redirect } from 'react-router'
 const AuthPage = () => {
 
 const [email, setEmail] = useState('')
@@ -16,8 +17,13 @@ function onSubmit(e){
 
 }
 if(auth.loading) return ("loading");
+if(auth.rederectToHompage) return (<Redirect to='/'/>);
+  
+
+
     return (
         <Container>
+          
             <Form onSubmit={onSubmit}>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
