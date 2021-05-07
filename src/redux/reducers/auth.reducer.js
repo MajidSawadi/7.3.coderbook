@@ -22,7 +22,6 @@ const authReducer = (state = initialState, action) => {
          ...state,
          loading: false,
          isAuthenticated: true,
-         loading:false,
          email: payload.email,
          rederectToHompage: true,
 
