@@ -15,6 +15,18 @@ const getPost = (email, password) => async (dispatch) => {
 
     }
 };
+const postPost = (body) => async (dispatch) => {
+    try{
+    dispatch({type: types.ADD_POST_REQUEST});
+    const {postData}=await api.post('/posts',{body})
+    console.log({postData});
+
+    dispatch({type: types.ADD_POST_SUCCESS, payload:postData})
+    }catch(error){
+
+    }
+};
 export  const postActions={
     getPost,
+    postPost,
 };

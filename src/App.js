@@ -9,7 +9,6 @@ function App() {
   return (
       <div className="App">
         <ProtectedRoute component={Navbar}/>
-    
         <Switch>
   <Route exact path={`/login`} component={AuthPage} />
   <ProtectedRoute exact path={`/`} component={HomePage} />
