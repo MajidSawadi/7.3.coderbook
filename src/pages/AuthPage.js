@@ -24,7 +24,7 @@ if(auth.rederectToHompage) return (<Redirect to='/'/>);
     return (
         <Container>
           
-            <Form onSubmit={onSubmit}>
+            <Form className="m-3 p5" onSubmit={onSubmit}>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email"  
@@ -47,10 +47,10 @@ if(auth.rederectToHompage) return (<Redirect to='/'/>);
     } />
   </Form.Group>
   <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+  
   </Form.Group>
   <Button variant="primary" type="submit">
-    Submit
+    Register
   </Button>
 </Form>
         </Container>

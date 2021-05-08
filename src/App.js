@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
       <div className="App">
-        <Navbar />
+        <ProtectedRoute component={Navbar}/>
+    
         <Switch>
   <Route exact path={`/login`} component={AuthPage} />
   <ProtectedRoute exact path={`/`} component={HomePage} />

@@ -17,6 +17,18 @@ const HomePage = () => {
 
     return (
         <Container>
+          <Row className="m-3 p5">
+          <InputGroup className="mb-3">
+    <FormControl
+      placeholder="Say Something ..."
+      aria-label="your comment.."
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary">Post</Button>
+    </InputGroup.Append>
+  </InputGroup>
+          </Row>
           <Row >
             {posts.map(p=> {
                 return(<Card style={{ width: '100%' }}>
@@ -35,10 +47,19 @@ const HomePage = () => {
           
                    )
                     })}
-                    
                     </Row>
-                  
-                    <InputGroup className="mb-3">
+                    
+                {p.comments?.map(i => {
+               return (
+            
+              <Card 
+              body>{i.content}
+              
+              </Card>
+                   )
+                    })}
+                    
+                     <InputGroup className="mb-3">
     <FormControl
       placeholder="your comment..."
       aria-label="your comment.."
@@ -48,6 +69,9 @@ const HomePage = () => {
       <Button variant="outline-secondary">comment</Button>
     </InputGroup.Append>
   </InputGroup>
+       
+                  
+                 
                 </Card.Body>
               </Card>)
             })}
