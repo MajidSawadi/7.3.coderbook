@@ -26,7 +26,19 @@ const postPost = (body) => async (dispatch) => {
 
     }
 };
+const getComment = (content) => async (dispatch) => {
+    try{
+    dispatch({type: types.ADD_COMMENT_REQUEST});
+    const {CommentData}=await api.get('/posts',{content})
+    console.log({CommentData});
+
+    dispatch({type: types.ADD_COMMENT_SUCCESS, payload:CommentData})
+    }catch(error){
+
+    }
+};
 export  const postActions={
     getPost,
     postPost,
+    getComment,
 };

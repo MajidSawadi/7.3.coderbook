@@ -1,11 +1,15 @@
 import * as types from "../constants/auth.constants";
 
 const email =localStorage.getItem('coderbookUser');
+ const id= 1;
 const initialState = {
   email: email ?email :"",
+  id: id ?id:"",
   loading: false,
+  username:[],
   isAuthenticated: !!email || false,
   rederectToHompage: !!email,
+  isTheSamePerson:!!id ,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -30,6 +34,24 @@ const authReducer = (state = initialState, action) => {
 
 
           };
+          case types.USER_PROFILE_REQUEST:
+            return{
+           ...state,
+           loading: true,
+  
+            };
+            case types.REGISTER_SUCCESS:
+              localStorage.setItem('coderbookUser',payload.email)
+            return{
+           ...state,
+           loading: false,
+           isAuthenticated: true,
+           username: payload.id,
+           isTheSamePerson: true,
+           
+  
+  
+            };
 
           
 

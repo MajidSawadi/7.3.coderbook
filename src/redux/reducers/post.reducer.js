@@ -4,6 +4,7 @@ const initialState = {
   posts: [],
   loading: false,
   isAuthenticated: false,
+  commentData: [],
 
 };
 
@@ -37,6 +38,22 @@ const postReducer = (state = initialState, action) => {
          loading: false,
         posts: payload,
         rederectToHompage: true,
+        isAuthenticated: true,
+
+          };
+
+          case types.ADD_COMMENT_REQUEST:
+          return{
+         ...state,
+         loading: false,
+          posts: payload,
+
+          };
+          case types.ADD_COMMENT_SUCCESS:
+          return{
+         ...state,
+         loading: false,
+        posts: payload,
         isAuthenticated: true,
 
 
