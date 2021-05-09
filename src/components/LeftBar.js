@@ -12,7 +12,6 @@ const LeftBar = () => {
      dispatch(authActions.getProfile());
  }, [dispatch])
 
-
  if(laoding) return <h1>loading</h1>
 
     return (
